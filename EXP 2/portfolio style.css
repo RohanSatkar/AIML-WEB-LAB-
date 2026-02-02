@@ -1,0 +1,159 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0b0220, #12002f);
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    min-height: 100vh;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #00e5ff;
+}
+
+.hero p {
+    color: #cfcfcf;
+    margin-bottom: 30px;
+}
+
+/* STATS */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.stat-box span {
+    font-size: 0.8rem;
+    color: #00e5ff;
+}
+
+/* IMAGE */
+.hero-image img {
+    width: 320px;
+    height: 320px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 229, 255, 0.3);
+    object-fit: cover;
+    border: 3px solid #00e5ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 70px #00e5ff;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 10%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 span {
+    color: #00e5ff;
+}
+
+.about p,
+.projects p {
+    max-width: 800px;
+    color: #dcdcdc;
+}
+
+.location {
+    margin-top: 10px;
+    color: #00e5ff;
+}
+
+/* SKILLS */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.skill {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* PROJECT CARD */
+.project-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 700px;
+}
+
+.project-card h3 {
+    color: #00e5ff;
+    margin-bottom: 10px;
+}
+
+.project-card span {
+    display: block;
+    margin-top: 10px;
+    color: #aaa;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-image {
+        margin-top: 40px;
+    }
+}

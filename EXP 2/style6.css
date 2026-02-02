@@ -1,0 +1,45 @@
+/* Main email container */
+#email {
+    padding: 50px;           /* user story 2 */
+    margin-top: 50px;        /* user story 3 */
+    width: 500px;            /* user story 4 */
+    border: 2px solid #333;  /* user story 5 */
+    box-sizing: border-box;  /* user story 6 */
+    background-color: #f9f9f9;
+}
+
+/* Confidential & Top Secret divs */
+#confidential,
+#top-secret {
+    display: inline-block;      /* user stories 9 & 10 */
+    padding: 10px 15px;         /* user stories 11 & 12 */
+    margin-left: 10px;          /* user stories 13 & 14 */
+    border: 2px solid #900;     /* user stories 15 & 16 */
+    font-weight: bold;
+    color: white;
+    transform: rotate(-15deg);  /* user stories 19 & 20 */
+}
+
+/* Separate rotation for Top Secret if needed */
+#top-secret {
+    background-color: #900;
+    transform: rotate(15deg);
+}
+
+#confidential {
+    background-color: #d9534f;
+}
+
+/* Paragraphs */
+#email p {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* Blurred spans */
+.blurred {
+    filter: blur(3px);          /* user story 24 */
+    background-color: #ccc;
+    padding: 2px 4px;
+    border-radius: 3px;
+}

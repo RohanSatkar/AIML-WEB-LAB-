@@ -1,0 +1,69 @@
+/* Body styles per requirement 30 & 31 */
+body {
+    background-color: rosybrown;
+    font-family: Arial, sans-serif;
+}
+
+/* Main card container per requirements 15, 32-38 */
+.business-card {
+    width: 300px;
+    background-color: #ffffff; /* Clean white background for contrast */
+    padding: 20px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 15px; /* Added for a modern look */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Profile image per requirements 16, 39 + Circular styling */
+.profile-image {
+    max-width: 100%;
+    height: 120px; /* Fixed height to help create the circle */
+    width: 120px;  /* Fixed width to help create the circle */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Prevents the image from stretching */
+    border: 3px solid rosybrown;
+}
+
+/* Paragraph spacing per requirements 17 & 40 */
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Specific styling for the name to make it pop */
+.full-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.designation {
+    font-style: italic;
+    color: #555;
+}
+
+/* Link styling per requirements 18 & 41 */
+a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.social-media h2 {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Adding space between social links */
+.social-media a {
+    margin: 0 5px;
+    font-size: 0.9rem;
+}
+
+.social-media a:hover, .portfolio-link:hover {
+    color: rosybrown;
+}

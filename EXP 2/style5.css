@@ -1,0 +1,64 @@
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Feature card container */
+.feature-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Feature card styling */
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Checkbox styling */
+.feature-card input[type="checkbox"] {
+    appearance: none;       /* remove default style */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #666; /* border width & color */
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Checkmark */
+.feature-card input[type="checkbox"]:checked::after {
+    content: "✓";
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    left: 3px;
+}
+
+/* Checked styles */
+.feature-card input[type="checkbox"]:checked {
+    background-color: #4caf50; /* background color when checked */
+    border-color: #2e7d32;    /* border color when checked */
+}

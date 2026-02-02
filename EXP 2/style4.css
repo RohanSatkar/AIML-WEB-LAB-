@@ -1,0 +1,45 @@
+/* 1. Body background */
+body {
+    background-color: #f4f4f4;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+
+/* 2. Color grid */
+.color-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* 5. Color box size */
+.color-box {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+}
+
+/* 6. Hexadecimal color */
+.color1 {
+    background-color: #ff5733;
+}
+
+/* 7. RGB color */
+.color2 {
+    background-color: rgb(52, 152, 219);
+}
+
+/* 8. Predefined color */
+.color3 {
+    background-color: green;
+}
+
+/* 9. HSL color */
+.color4 {
+    background-color: hsl(45, 100%, 50%);
+}
+
+/* 10. Any background color */
+.color5 {
+    background-color: purple;
+}

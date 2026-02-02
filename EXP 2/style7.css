@@ -1,0 +1,64 @@
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* 2. Pricing container */
+.pricing-container {
+    display: flex;       /* user story 6 */
+    flex-wrap: wrap;     /* user story 7 */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* 12. Pricing card */
+.pricing-card {
+    display: flex;           /* user story 13 */
+    flex-direction: column;  /* user story 14 */
+    justify-content: space-between; /* user story 15 */
+    flex: 0 0 200px;         /* user story 16 */
+    border: 2px solid black; /* user story 17 */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Plan order and flex-grow */
+.basic-plan {
+    order: 0;               /* user story 18 */
+    background-color: #d1e7dd; /* soft green */
+}
+
+.pro-plan {
+    order: 1;               /* user story 23 */
+    flex-grow: 2;           /* user story 24 */
+    background-color: #ffe5b4; /* soft orange */
+}
+
+.premium-plan {
+    order: 2;               /* user story 27 */
+    background-color: #f8d7da; /* soft pink */
+}
+
+/* Styling text */
+.pricing-card h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #222;
+}
+
+.pricing-card p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+}
