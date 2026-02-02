@@ -1,0 +1,95 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page background */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(120deg, #e0f7fa, #fce4ec);
+    padding: 40px;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 38px;
+    color: #263238;
+    letter-spacing: 1px;
+}
+
+/* Pricing container */
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Pricing cards (common styling) */
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 200px;
+    border: 2px solid #263238;
+    border-radius: 15px;
+    padding: 25px;
+    min-height: 210px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Plan title */
+.pricing-card h2 {
+    font-size: 26px;
+    color: #37474f;
+}
+
+/* Price text */
+.pricing-card p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* BASIC PLAN */
+.basic-plan {
+    order: 0;
+    background: linear-gradient(135deg, #bbdefb, #e3f2fd);
+}
+
+.basic-plan p {
+    color: #1565c0;
+}
+
+/* PRO PLAN (highlighted) */
+.pro-plan {
+    order: 1;
+    flex-grow: 2;
+    background: linear-gradient(135deg, #d1c4e9, #ede7f6);
+}
+
+.pro-plan p {
+    color: #4a148c;
+}
+
+/* PREMIUM PLAN */
+.premium-plan {
+    order: 2;
+    background: linear-gradient(135deg, #ffe0b2, #fff3e0);
+}
+
+.premium-plan p {
+    color: #e65100;
+}

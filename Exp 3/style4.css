@@ -1,0 +1,121 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page background */
+body {
+    background: #dcd6c9;
+    font-family: "Times New Roman", Georgia, serif;
+    padding: 30px;
+}
+
+/* Newspaper grid */
+.newspaper-layout {
+    display: grid;
+    grid-template-areas:
+        "title title title"
+        "feature-article feature-article cover-image"
+        "secondary-article secondary-article cover-image"
+        "small-article1 small-article2 small-article3";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr 1fr 1fr;
+    gap: 18px;
+    background: #fdfcf7;
+    padding: 25px;
+    border: 1px solid #999;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Title */
+.title {
+    grid-area: title;
+    text-align: center;
+    border-bottom: 4px double #000;
+    padding-bottom: 12px;
+}
+
+.title h1 {
+    font-size: 46px;
+    letter-spacing: 3px;
+}
+
+.tagline {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+/* Feature article */
+.feature-article {
+    grid-area: feature-article;
+    padding-right: 15px;
+    border-right: 1px solid #777;
+}
+
+.feature-article h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Secondary article */
+.secondary-article {
+    grid-area: secondary-article;
+    padding-right: 15px;
+    border-right: 1px solid #777;
+}
+
+.secondary-article h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+/* Small articles */
+.small-article1 { grid-area: small-article1; }
+.small-article2 { grid-area: small-article2; }
+.small-article3 { grid-area: small-article3; }
+
+.small-article1 h3,
+.small-article2 h3,
+.small-article3 h3 {
+    font-size: 18px;
+    border-bottom: 1px solid #444;
+    margin-bottom: 6px;
+}
+
+/* Cover image */
+.cover-image {
+    grid-area: cover-image;
+    text-align: center;
+}
+
+.cover-image img {
+    max-width: 100%;
+    border: 1px solid #777;
+}
+
+figcaption {
+    font-size: 13px;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Text styling */
+article p {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: justify;
+    color: #111;
+}
+
+/* Drop cap effect */
+.drop-cap::first-letter {
+    font-size: 48px;
+    float: left;
+    line-height: 1;
+    padding-right: 6px;
+    font-weight: bold;
+}

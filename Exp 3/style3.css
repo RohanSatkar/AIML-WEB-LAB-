@@ -1,0 +1,114 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Layout */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    display: flex;
+    background: #f1f5f9;
+}
+
+/* Navbar */
+#navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(180deg, #1e293b, #0f172a);
+    padding: 20px;
+}
+
+#navbar header {
+    color: #f8fafc;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Nav links */
+.nav-link {
+    display: block;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #334155;
+    color: #ffffff;
+}
+
+/* Main document */
+#main-doc {
+    margin-left: 280px;
+    padding: 30px;
+}
+
+/* Sections styled like cards */
+.main-section {
+    background: #ffffff;
+    border-left: 6px solid #3b82f6;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Section header */
+.main-section header {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+/* Paragraphs */
+.main-section p {
+    margin-bottom: 10px;
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* Code blocks */
+.main-section code {
+    display: block;
+    background: #e2e8f0;
+    padding: 10px;
+    margin: 12px 0;
+    border-radius: 6px;
+    font-family: monospace;
+}
+
+/* Lists */
+.main-section ul {
+    margin-left: 20px;
+}
+
+.main-section li {
+    margin-bottom: 6px;
+}
+
+/* Media Query (REQUIRED) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    #navbar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    #main-doc {
+        margin-left: 0;
+    }
+}
