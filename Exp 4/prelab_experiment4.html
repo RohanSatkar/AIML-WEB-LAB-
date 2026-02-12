@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 4 - Pre Lab Exercises</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle at top, #0f0c29, #302b63, #24243e);
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 30px;
+            color: #00f5ff;
+            text-shadow: 0 0 20px #00f5ff;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            margin: 30px auto;
+            padding: 25px;
+            width: 75%;
+            border-radius: 15px;
+            border: 1px solid #00f5ff;
+            box-shadow: 0 0 20px #00f5ff;
+        }
+
+        button {
+            padding: 10px 25px;
+            background: transparent;
+            border: 2px solid #00ffcc;
+            color: #00ffcc;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #00ffcc;
+            color: black;
+            box-shadow: 0 0 20px #00ffcc;
+        }
+
+        input {
+            padding: 8px;
+            border-radius: 20px;
+            border: 2px solid #ff00ff;
+            background: transparent;
+            color: white;
+            outline: none;
+            width: 200px;
+        }
+
+        p {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>⚡ JavaScript Pre-Lab Neon Exercises</h1>
+
+<!-- Exercise 3 -->
+<div class="card">
+    <h2>Exercise 3: Welcome Alert</h2>
+    <button onclick="welcome()">Show Welcome</button>
+</div>
+
+<!-- Exercise 4 -->
+<div class="card">
+    <h2>Exercise 4: Enter Name & Age</h2>
+
+    <input type="text" id="userName" placeholder="Enter your Name"><br><br>
+    <input type="number" id="userAge" placeholder="Enter your Age"><br><br>
+
+    <button onclick="showDetails()">Show Details</button>
+
+    <p id="detailsOutput"></p>
+</div>
+
+<!-- Exercise 5 -->
+<div class="card">
+    <h2>Exercise 5: Button Click</h2>
+    <button onclick="clickMessage()">Click Me</button>
+    <p id="msg"></p>
+</div>
+
+<!-- Exercise 7 -->
+<div class="card">
+    <h2>Exercise 7: Change Paragraph</h2>
+    <p id="text">Original Text</p>
+    <button onclick="changeText()">Change Text</button>
+</div>
+
+<!-- Exercise 8 -->
+<div class="card">
+    <h2>Exercise 8: DOM Manipulation</h2>
+    <p id="demo">This is original content.</p>
+    <button onclick="modify()">Modify</button>
+</div>
+
+<!-- Exercise 9 -->
+<div class="card">
+    <h2>Exercise 9: Time-Based Greeting</h2>
+    <button onclick="greet()">Greet Me</button>
+    <p id="greeting"></p>
+</div>
+
+<script>
+
+function welcome() {
+    alert("⚡ Welcome to My Neon JavaScript Page!");
+}
+
+function showDetails() {
+
+    let name = document.getElementById("userName").value.trim();
+    let age = document.getElementById("userAge").value.trim();
+    let output = document.getElementById("detailsOutput");
+
+    if(name === "" || age === "") {
+        output.innerHTML = "⚠ Please enter both Name and Age!";
+        output.style.color = "orange";
+        return;
+    }
+
+    output.innerHTML = "✨ Name: " + name + "<br>🎂 Age: " + age;
+    output.style.color = "#00ffcc";
+    output.style.textShadow = "0 0 15px #00ffcc";
+}
+
+function clickMessage() {
+    let message = document.getElementById("msg");
+    message.innerHTML = "🔥 Button Clicked Successfully!";
+    message.style.color = "#00ffcc";
+    message.style.textShadow = "0 0 20px #00ffcc";
+}
+
+function changeText() {
+    let para = document.getElementById("text");
+    para.innerHTML = "⚡ Text Changed Successfully!";
+    para.style.color = "#ff00ff";
+    para.style.textShadow = "0 0 15px #ff00ff";
+}
+
+function modify() {
+    document.getElementById("demo").innerHTML = "🚀 Content Updated Using DOM!";
+}
+
+function greet() {
+    let hour = new Date().getHours();
+    let message = document.getElementById("greeting");
+
+    if(hour < 12){
+        message.innerHTML = "🌅 Good Morning!";
+        message.style.color = "#00ffcc";
+    } else {
+        message.innerHTML = "🌇 Good Evening!";
+        message.style.color = "#ff9800";
+    }
+}
+
+</script>
+
+</body>
+</html>

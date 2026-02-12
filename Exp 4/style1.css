@@ -1,0 +1,113 @@
+/* Background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #0f0c29, #302b63, #24243e);
+    color: white;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 30px;
+}
+
+/* Main Title */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00f5ff;
+    text-shadow: 0 0 10px #00f5ff,
+                 0 0 20px #00f5ff,
+                 0 0 40px #00f5ff;
+}
+
+/* Glass Neon Cards */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 20px;
+    border: 1px solid rgba(0,255,255,0.3);
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 25px #00f5ff,
+                0 0 50px #00f5ff;
+    transform: translateY(-5px);
+}
+
+/* Neon Buttons */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: transparent;
+    color: #00f5ff;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #00f5ff;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background: #00f5ff;
+    color: black;
+    box-shadow: 0 0 15px #00f5ff,
+                0 0 30px #00f5ff,
+                0 0 60px #00f5ff;
+}
+
+/* Hover Box */
+.hover-box {
+    width: 220px;
+    height: 110px;
+    background: transparent;
+    border: 2px solid #ff00ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+    color: #ff00ff;
+}
+
+.hover-box:hover {
+    background: #ff00ff;
+    color: black;
+    box-shadow: 0 0 20px #ff00ff,
+                0 0 40px #ff00ff;
+}
+
+/* Input Fields */
+input {
+    padding: 12px;
+    width: 60%;
+    border-radius: 25px;
+    border: 2px solid #00ffcc;
+    background: transparent;
+    color: white;
+    margin-top: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+/* Paragraph Glow */
+p {
+    margin-top: 15px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
