@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exp 6 - Validation</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#0f0f1a;
+    color:white;
+    transition:0.3s;
+}
+
+.box{
+    width:350px;
+    margin:60px auto;
+    padding:20px;
+    text-align:center;
+    background:#1c1c2e;
+    border-radius:10px;
+    box-shadow:0 0 15px #00f7ff;
+}
+
+input{
+    width:90%;
+    padding:8px;
+    margin:8px 0;
+    border:none;
+    border-radius:5px;
+    background:#2c2c44;
+    color:white;
+}
+
+button{
+    padding:8px 15px;
+    margin-top:8px;
+    border:none;
+    border-radius:5px;
+    background:#00f7ff;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.error{ color:#ff4d4d; font-size:13px; }
+.success{ color:#00ff88; }
+
+/* Soft Light Theme */
+.light{
+    background:#e8edf5;
+    color:#222;
+}
+.light .box{
+    background:#f4f6fa;
+    box-shadow:0 0 10px rgba(0,150,255,0.3);
+}
+.light input{
+    background:#dde3ee;
+    color:#222;
+}
+.light button{
+    background:#0099cc;
+    color:white;
+}
+
+.toggle{
+    position:fixed;
+    top:15px;
+    right:15px;
+}
+</style>
+</head>
+
+<body>
+
+<button class="toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+<div class="box">
+<h3>Form Validation</h3>
+
+<input type="text" id="user" placeholder="Username">
+<input type="text" id="email" placeholder="Email">
+<div id="e1" class="error"></div>
+
+<input type="text" id="phone" placeholder="Phone (10 digits)">
+<div id="e2" class="error"></div>
+
+<input type="password" id="pass" placeholder="Password">
+<div id="e3" class="error"></div>
+
+<button onclick="validate()">Submit</button>
+<div id="msg" class="success"></div>
+</div>
+
+<script>
+window.onload=function(){
+    let u=localStorage.getItem("user");
+    if(u) document.getElementById("user").value=u;
+
+    if(localStorage.getItem("theme")=="light")
+        document.body.classList.add("light");
+}
+
+function validate(){
+    let email=document.getElementById("email").value;
+    let phone=document.getElementById("phone").value;
+    let pass=document.getElementById("pass").value;
+    let user=document.getElementById("user").value;
+    let ok=true;
+
+    if(!/^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(email)){
+        e1.innerText="Invalid Email";
+        ok=false;
+    } else e1.innerText="";
+
+    if(!/^\d{10}$/.test(phone)){
+        e2.innerText="Enter 10 digit number";
+        ok=false;
+    } else e2.innerText="";
+
+    if(pass.length<6){
+        e3.innerText="Password min 6 chars";
+        ok=false;
+    } else e3.innerText="";
+
+    if(ok){
+        localStorage.setItem("user",user);
+        msg.innerText="Form Submitted!";
+    } else msg.innerText="";
+}
+
+function toggleTheme(){
+    document.body.classList.toggle("light");
+    localStorage.setItem("theme",
+        document.body.classList.contains("light")?"light":"dark");
+}
+</script>
+
+</body>
+</html>

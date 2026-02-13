@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Experiment 6</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#1c1c2e;
+    color:white;
+    transition:0.3s;
+}
+
+.container{
+    width:350px;
+    margin:60px auto;
+    padding:20px;
+    background:#2c2c44;
+    border-radius:8px;
+    text-align:center;
+}
+
+input{
+    width:90%;
+    padding:8px;
+    margin:8px 0;
+}
+
+button{
+    padding:8px 15px;
+    margin-top:8px;
+    cursor:pointer;
+}
+
+.error{
+    color:red;
+    font-size:13px;
+}
+
+.success{
+    color:lightgreen;
+}
+
+/* Light Mode */
+.light{
+    background:#e8edf5;
+    color:#222;
+}
+.light .container{
+    background:#f4f6fa;
+}
+
+.toggle{
+    position:fixed;
+    top:10px;
+    right:10px;
+}
+</style>
+</head>
+
+<body>
+
+<button class="toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+<div class="container">
+<h3>Contact Form</h3>
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="text" id="email" placeholder="Email">
+<div id="emailError" class="error"></div>
+
+<input type="text" id="phone" placeholder="Phone Number">
+<div id="phoneError" class="error"></div>
+
+<input type="password" id="password" placeholder="Password">
+<div id="passwordError" class="error"></div>
+
+<button onclick="validateForm()">Submit</button>
+
+<div id="message" class="success"></div>
+</div>
+
+<script>
+
+// Load stored data on page load
+window.onload = function(){
+
+    let savedUser = localStorage.getItem("username");
+    if(savedUser){
+        document.getElementById("username").value = savedUser;
+    }
+
+    let savedTheme = localStorage.getItem("theme");
+    if(savedTheme === "light"){
+        document.body.classList.add("light");
+    }
+};
+
+// Validation Function
+function validateForm(){
+
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let password = document.getElementById("password").value;
+    let username = document.getElementById("username").value;
+
+    let valid = true;
+
+    // Email Validation
+    if(!email.includes("@")){
+        emailError.innerText = "Invalid Email";
+        valid = false;
+    } else {
+        emailError.innerText = "";
+    }
+
+    // Phone Validation
+    if(phone.length !== 10 || isNaN(phone)){
+        phoneError.innerText = "Enter 10 digit number";
+        valid = false;
+    } else {
+        phoneError.innerText = "";
+    }
+
+    // Password Validation
+    if(password.length < 6){
+        passwordError.innerText = "Password must be at least 6 characters";
+        valid = false;
+    } else {
+        passwordError.innerText = "";
+    }
+
+    // If Valid
+    if(valid){
+        localStorage.setItem("username", username);
+        message.innerText = "Form Submitted Successfully!";
+    } else {
+        message.innerText = "";
+    }
+}
+
+// Theme Toggle
+function toggleTheme(){
+    document.body.classList.toggle("light");
+
+    if(document.body.classList.contains("light")){
+        localStorage.setItem("theme","light");
+    } else {
+        localStorage.setItem("theme","dark");
+    }
+}
+
+</script>
+
+</body>
+</html>
