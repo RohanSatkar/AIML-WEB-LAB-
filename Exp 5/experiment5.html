@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Neon DOM Lab</title>
+<style>
+body{
+  margin:0;
+  font-family:sans-serif;
+  background:linear-gradient(135deg,#141e30,#243b55);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:40px;
+  color:white;
+}
+
+h1{
+  margin-bottom:40px;
+  font-size:38px;
+  color:#00fff2;
+  text-shadow:0 0 20px #00fff2;
+}
+
+.container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+  gap:35px;
+  width:90%;
+}
+
+.card{
+  padding:40px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(12px);
+  box-shadow:0 0 25px #00fff2;
+  transition:.4s;
+  min-height:180px;
+  font-size:18px;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 35px #00fff2;
+}
+
+button{
+  margin-top:15px;
+  padding:8px 18px;
+  border:none;
+  border-radius:20px;
+  background:#00fff2;
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+input{
+  margin-top:10px;
+  padding:8px;
+  border:none;
+  border-radius:10px;
+  width:80%;
+}
+
+ul{ list-style:none; padding:0; }
+li{
+  margin-top:8px;
+  padding:8px;
+  border-radius:8px;
+  background:#00fff233;
+}
+</style>
+</head>
+
+<body>
+
+<h1>⚡ Neon DOM Big Edition ⚡</h1>
+
+<div class="container">
+
+<div class="card">
+  <p id="t">Original Text</p>
+  <button onclick="t.innerText='✨ Text Changed!'">Change</button>
+</div>
+
+<div class="card">
+  <button onclick="this.after(document.createElement('p')).innerText='🔥 New Paragraph!'">
+    Add Paragraph
+  </button>
+</div>
+
+<div class="card">
+  <p id="r">Remove Me</p>
+  <button onclick="r.remove()">Remove</button>
+</div>
+
+<div class="card">
+  <button id="e">Click Me</button>
+  <p id="m"></p>
+</div>
+
+<div class="card">
+  <input id="i" placeholder="Type something">
+  <button onclick="o.innerText=i.value">Show</button>
+  <p id="o"></p>
+</div>
+
+<div class="card">
+  <input id="task" placeholder="New task">
+  <button onclick="if(task.value) list.innerHTML+=`<li>${task.value}</li>`; task.value=''">
+    Add Task
+  </button>
+  <ul id="list"></ul>
+</div>
+
+</div>
+
+<script>
+e.onclick=()=>m.innerText="⚡ Event Triggered!";
+</script>
+
+</body>
+</html>
